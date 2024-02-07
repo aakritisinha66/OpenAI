@@ -1,0 +1,14 @@
+<!-- <div *ngIf="!isAuthenticated; else loggedIn"> -->
+<div *ngIf="!isAuthenticated;">
+    <h2>Login</h2>
+    <button (click)="login()">Login</button>
+</div>
+<!-- 
+<ng-template #loggedIn>
+    <div>
+        <h2>Welcome, {{ userData.name }}!</h2>
+        <app-home></app-home>
+        <button (click)="goToHome()">Home</button>
+        <button (click)="logout()">Logout</button>
+    </div>
+</ng-template> -->

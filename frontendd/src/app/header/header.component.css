@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    background-color: color(srgb 0.0039 0.1502 0.26);
+    padding: 10px;
+}
+
+.title-color {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 20px;
+}
+
+.example-icon {
+    color: rgba(255, 255, 255, 0.68);
+}

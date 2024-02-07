@@ -1,0 +1,38 @@
+/* body {
+    background-image: url('./../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: -webkit-fill-available;
+} */
+
+:host ::ng-deep mat-tab-header {
+    padding: 50px;
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    background-color: rgba(0, 54, 93, 0.68);
+    padding-bottom: 0px;
+}
+
+mat-card {
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    background-color: rgba(0, 54, 93, 0.68);
+    margin-top: 30px;
+}
+
+section {
+    color: white;
+    text-align: center;
+}
+
+button {
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    background-color: white;
+    color: color(srgb 0.0026 0.2133 0.3669);
+    font-weight: bolder;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.99);
+    height: 27px;
+    width: 90px;
+    font-size: 12px;
+}

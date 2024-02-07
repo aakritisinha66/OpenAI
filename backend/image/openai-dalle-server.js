@@ -12,7 +12,8 @@ const port = 8002;
 
 app.use(express.json({ limit: '10mb' }));
 
-const openai = new OpenAI();
+// const openai = new OpenAI();
+const openai = new OpenAI({apiKey: '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'});
 
 app.post('/generate-image', async (req, res) => {
     try {

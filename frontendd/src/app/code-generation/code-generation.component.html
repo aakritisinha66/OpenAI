@@ -1,0 +1,70 @@
+<section class="split-left">
+    <div class="title">
+        <mat-icon class="code-icon">code</mat-icon>
+        <h1>Code Generator</h1>
+    </div>
+    <form [formGroup]="chatForm" (ngSubmit)="onSubmit()">
+        <div class="fields">
+            <label>Request Name <sup>*</sup></label>
+            <mat-form-field>
+                <input matInput formControlName="requestName" required>
+                <mat-error
+                    *ngIf="chatForm.get('requestName')?.hasError('required') && chatForm.get('requestName')?.touched">
+                    Request name is required.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="fields">
+            <label>Programming Language <sup>*</sup></label>
+            <mat-form-field>
+                <mat-select (selectionChange)="onLanguageSelected($event.value)" formControlName="language"
+                    placeholder="Selected Language" required>
+                    <mat-option *ngFor="let language of languages" [value]="language.value">
+                        {{ language.viewValue }}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="chatForm.controls['language'].invalid && chatForm.controls['language'].touched">
+                    Programming language is required.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="fields">
+            <label>Instructions <sup>*</sup></label>
+            <mat-form-field>
+                <textarea matInput formControlName="description" required></textarea>
+                <mat-error *ngIf="chatForm.controls['description'].invalid && chatForm.controls['description'].touched">
+                    Description is required.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="fields btn-style">
+            <button class="button" type="submit" [disabled]="disableButton"
+                [style.cursor]="disableButton ? 'not-allowed' : ''"
+                [style.border]="disableButton ? '2px solid darkgray' : ''"
+                [style.backgroundColor]="disableButton ? 'darkgray' : ''">Submit</button>
+        </div>
+    </form>
+</section>
+<section class="split-right row">
+    <div class="split-top row">
+        <input matInput readonly [placeholder]="selectedLanguage" class="readInput">
+
+        <mat-icon class="icons" (click)="saveFile ? saveOutputFile(): null" [style.cursor]="saveFile ? 'pointer' : 'not-allowed'">save</mat-icon>
+
+        <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+        <mat-icon class="icons" (click)="fileUpload.click()">attach_file</mat-icon>
+        <small>{{fileName || "No file uploaded yet."}}</small>
+        <!-- <mat-icon class="icons">save</mat-icon> -->
+    </div>
+    <div class="split-bottom">
+        <div class="fields output-box">
+            <span class="label-output">
+                <label>Output</label>
+                <span class="copy-style" (click)="copyContent(textareaElement)">Copy</span>
+            </span>
+            <mat-form-field>
+                <textarea #textareaElement matInput readonly>{{ outputText }}</textarea>
+            </mat-form-field>
+        </div>
+    </div>
+</section>

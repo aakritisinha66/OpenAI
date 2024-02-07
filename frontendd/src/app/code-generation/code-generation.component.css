@@ -1,0 +1,222 @@
+/* :host { */
+/* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+/* } */
+
+section {
+    height: 81%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+    /* background-color: rgba(255, 255, 255, 0.25); */
+    border-radius: 7px;
+}
+
+.split-left {
+    left: 0;
+    width: 25.8%;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.split-right {
+    right: 0;
+    width: 68.2%;
+    margin: 30px;
+    height: 100%;
+    padding: 0px;
+}
+
+.split-top {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 7px;
+    width: 100%;
+    margin-left: 0px;
+    border-radius: 7px;
+    padding: 22px;
+}
+
+.split-bottom {
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 67%;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0px;
+    border-radius: 7px;
+}
+
+.readInput {
+    background-color: color(srgb 0 0.2057 0.36 / 0.5);
+    /* color: rgb(170, 170, 170); */
+    font-size: 13.5px;
+    height: 38px;
+    padding-bottom: 0px;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-left: 10px;
+    width: 250px;
+}
+
+.icons {
+    margin-left: 20px;
+    background-color: color(srgb 0.1986 0.4386 0.5785);
+    height: 35px;
+    display: inline-grid;
+    width: 42px;
+    margin-top: 1px;
+    text-align: center;
+    color: color(srgb 1 1 1);
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.fields {
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.output-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.label-output {
+    /* background-color: color(srgb 0 0.2035 0.36); */
+    /* background-color: color(srgb 0 0.2057 0.36 / 0.5); */
+    background-color: color(srgb 0 0.2035 0.36 / 0.69);
+    padding: 10px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+:host ::ng-deep .mdc-line-ripple {
+    display: none;
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+    padding: 11px;
+    background-color: color(srgb 0 0.2057 0.36 / 0.5);
+    border-radius: 7px;
+    color: rgba(170, 170, 170, 0.8);
+    font-size: 13.5px;
+}
+
+:host ::ng-deep .output-box .mat-mdc-text-field-wrapper {
+    padding: 11px;
+    /* background-color: color(srgb 0 0.2057 0.36 / 0.5); */
+    /* background-color: color(srgb 0 0.2035 0.36); */
+    background-color: color(srgb 0 0.1809 0.32);
+    border-radius: 7px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: rgba(170, 170, 170, 0.8);
+    font-size: 13.5px;
+}
+
+label {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+h1 {
+    color: white;
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+.title {
+    padding-left: 20px;
+    display: inline-flex;
+}
+
+.fields textarea {
+    min-height: 235px;
+    color: white;
+}
+
+.output-box textarea {
+    min-height: 380px;
+    color: white;
+}
+
+:host ::ng-deep .mat-form-field-appearance-fill .mat-mdc-select-arrow-wrapper {
+    transform: none;
+}
+
+.code-icon {
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+mat-option:hover {
+    background-color: color(srgb 0 0.2057 0.36 / 0.5);
+    color: white;
+}
+
+input,
+mat-select {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+button {
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    background-color: white;
+    color: color(srgb 0.0026 0.2133 0.3669);
+    font-weight: bolder;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.99);
+    height: 27px;
+    width: 90px;
+    font-size: 12px;
+}
+
+.btn-style {
+    text-align: center;
+    display: block;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.file-input {
+    display: none;
+}
+
+small {
+    position: absolute;
+    top: 55px;
+    left: 420px;
+    color: color(srgb 0.0107 0.15 0.2609);
+    font-weight: 500;
+}
+
+mat-error {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    color: red;
+    margin-top: -4px;
+}
+
+sup {
+    color: red;
+}
+
+.copy-style {
+    text-align: right;
+    margin-left: 880px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
